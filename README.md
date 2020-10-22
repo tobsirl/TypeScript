@@ -69,3 +69,38 @@ for (let i = 0; i < numbers.length; i++) {
 ```
 
 ### Anotations with functions
+| Types            | Description                                                                |
+|------------------|----------------------------------------------------------------------------|
+| Type annotations | Code we add to tell TypeScript what type of arguments a function will receive and what type of values it will return |
+| Type inference   | TypeScript tries to figure out what type of value a function will return    |
+
+```ts
+// basic function
+const add = (a: number, b: number): number => {
+  return a + b;
+};
+
+function divide(a: number, b: number): number {
+  return a / b;
+}
+
+// anonymous function
+const multiply = function (a: number, b: number): number {
+  return a * b;
+};
+
+const subtract = (a: number, b: number): number => {
+  return a - b;
+};
+
+// void when nothing is returned from the function
+const logger = (message: string): void => {
+  console.log(message);
+};
+
+// never when the function will never return a value 
+const throwError = (message: string): never => {
+  throw new Error(message);
+};
+
+```
