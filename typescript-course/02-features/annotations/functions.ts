@@ -21,7 +21,17 @@ const logger = (message: string): void => {
   console.log(message);
 };
 
-// never when the function will never return a value 
+// never when the function will never return a value
 const throwError = (message: string): never => {
   throw new Error(message);
+};
+
+const todayWeather = {
+  date: new Date(),
+  weather: 'sunny',
+};
+
+const logWeather = (forecast: { date: Date; weather: string }): void => {
+  console.log('date', forecast.date);
+  console.log('weather', forecast.weather);
 };
