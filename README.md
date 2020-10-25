@@ -69,10 +69,10 @@ for (let i = 0; i < numbers.length; i++) {
 ```
 
 ### Anotations with functions
-| Types            | Description                                                                |
-|------------------|----------------------------------------------------------------------------|
+| Types            | Description                                                                                                          |
+|------------------|----------------------------------------------------------------------------------------------------------------------|
 | Type annotations | Code we add to tell TypeScript what type of arguments a function will receive and what type of values it will return |
-| Type inference   | TypeScript tries to figure out what type of value a function will return    |
+| Type inference   | TypeScript tries to figure out what type of value a function will return                                             |
 
 ```ts
 // basic function
@@ -124,4 +124,41 @@ const { age }: { age: number } = profile;
 const {
   coords: { lat, lng },
 }: { coords: { lat: number; lng: number } } = profile;
+```
+
+### Anotations for Arrays
+| Types       | Description                                                |
+|-------------|------------------------------------------------------------|
+| Type Arrays | Arrays where each element is some consistent type of value |
+
+Why use TypeScript with arrays
+- TypeScript can do inference when extracting values from an array
+- TypeScrpt can prevent us from adding incompatible values to the array
+- We can get help with map, forEach, reduce functions
+- Flexible - arrays can still contain multiple different types
+
+```ts
+const carMarkers: string[] = ['ford', 'toyota', 'chevy'];
+const dates = [new Date(), new Date()];
+
+const carsByMake = [['f150'], ['corolla'], ['camaro']];
+
+// Help with inference when extracting values
+const car = carMarkers[0];
+const myCar = carMarkers.pop();
+
+// Prevent incompatible values
+carMarkers.push(100);
+
+// Help with 'map'
+carMarkers.map((car: string): string => {
+  return car.toUpperCase();
+});
+
+// Flexible types
+const importantDates: (Date | string)[] = [new Date(), '2030-10-10'];
+importantDates.push('2030-10-10');
+importantDates.push(new Date());
+importantDates.push(23); // wrong type
+
 ```
