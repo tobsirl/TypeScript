@@ -179,3 +179,6 @@ const pepsi: Drink = ['brown', true, 40];
 const sprite: Drink = ['clear', true, 40];
 const tea: Drink = ['brown', false, 0];
 ```
+
+### Interfaces
+Creates a new type, describing the property names and value types of an object
