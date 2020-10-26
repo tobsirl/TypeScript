@@ -162,3 +162,6 @@ importantDates.push(new Date());
 importantDates.push(23); // wrong type
 
 ```
+
+### Tuples in TypeScript
+Tuple - Array like structure where each element represents some property of a record
