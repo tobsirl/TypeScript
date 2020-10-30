@@ -208,3 +208,9 @@ printVehicle(oldCivic);
 
 ### Classes
 Blueprint to create an object with some fields (values) and methods (functions) to represent a thing
+
+| Modifiers | Description                                                                               |
+|-----------|-------------------------------------------------------------------------------------------|
+| public    | Method can be called anywhere, any time                                                   |
+| private   | Method can only be called by other methods in this class                                  |
+| protected | Method can be called by other methods in this class, or by other methods in child classes |
