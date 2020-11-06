@@ -1,7 +1,7 @@
 import faker from 'faker';
 
 export default class User {
-  name: string;
+  private name: string;
   location: {
     lat: number;
     lng: number;

@@ -1,7 +1,7 @@
 import faker from 'faker';
 
 export default class Company {
-  name: string;
+  private name: string;
   catchPhrase: string;
   location: {
     lat: number;
