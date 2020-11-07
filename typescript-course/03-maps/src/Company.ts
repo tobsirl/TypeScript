@@ -20,9 +20,9 @@ export default class Company implements Mappable {
   }
 
   markerContent(): string {
-    return `Company Name: ${this.name} 
-            Catch Pharse: ${this.catchPhrase}
-            Latitude: ${this.location.lat} 
-            Longitude: ${this.location.lng}`;
+    return `<div><h1 style="color="red";">Company Name: ${this.name}</h1><br /> 
+            <h3>Catch Pharse: ${this.catchPhrase}</h3><br />
+            <p>Latitude: ${this.location.lat} 
+            Longitude: ${this.location.lng}</p></div>`;
   }
 }
