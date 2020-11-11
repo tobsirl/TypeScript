@@ -15,11 +15,4 @@ export class Sorter {
     }
   }
 
-  swap() {
-
-  }
-
-  compare() {
-    
-  }
 }
