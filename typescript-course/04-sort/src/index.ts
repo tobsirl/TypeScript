@@ -7,15 +7,18 @@ import { LinkedList } from './LinkedList';
 // numbers.sort()
 // console.log(numbers.data)
 
-const characters = new CharactersCollection('zaFeerGsergehtr');
-characters.sort();
-console.log(characters.data);
+// const characters = new CharactersCollection('zaFeerGsergehtr');
+// characters.sort();
+// console.log(characters.data);
 
-// const linkedList = new LinkedList();
+const linkedList = new LinkedList();
 
-// linkedList.add(500);
-// linkedList.add(-10);
-// linkedList.add(-3);
-// linkedList.add(4);
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.add(-3);
+linkedList.add(4);
+linkedList.add(6);
 
-// linkedList.print();
+linkedList.sort();
+
+linkedList.print();
