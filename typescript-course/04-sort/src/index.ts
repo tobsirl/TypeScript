@@ -4,23 +4,18 @@ import { CharactersCollection } from './CharactersCollection';
 import { LinkedList } from './LinkedList';
 
 // const numbers = new NumbersCollection([12345, 10, 3, -5, 0, 2]);
-// const sorterNumbers = new Sorter(numbers);
+// numbers.sort()
+// console.log(numbers.data)
 
-// const characters = new CharactersCollection('aFeerGsergehtr');
+const characters = new CharactersCollection('zaFeerGsergehtr');
+characters.sort();
+console.log(characters.data);
 
-// const sorter = new Sorter(characters);
+// const linkedList = new LinkedList();
 
-// sorter.sort();
+// linkedList.add(500);
+// linkedList.add(-10);
+// linkedList.add(-3);
+// linkedList.add(4);
 
-// console.log(characters.data);
-
-const linkedList = new LinkedList();
-
-linkedList.add(500);
-linkedList.add(-10);
-linkedList.add(-3);
-linkedList.add(4);
-
-const sorter = new Sorter(linkedList);
-sorter.sort();
-linkedList.print();
+// linkedList.print();
