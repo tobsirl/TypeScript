@@ -9,11 +9,12 @@ const matches = fs
     return row.split(',');
   });
 
-const MatchResult = {
-  HomeWin: 'H',
-  AwayWin: 'A',
-  Draw: 'D',
-};
+// enum - enumeration
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D',
+}
 
 let manUnitedWins = 0;
 
