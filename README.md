@@ -214,3 +214,35 @@ Blueprint to create an object with some fields (values) and methods (functions) 
 | public    | Method can be called anywhere, any time                                                   |
 | private   | Method can only be called by other methods in this class                                  |
 | protected | Method can be called by other methods in this class, or by other methods in child classes |
+
+### Abstract Classes
+* Can't be used to create an object directly
+* Only used as a parent class
+* Can contain real implementation for some methods
+* Child classes must implement some other method
+
+```ts
+abstract class Department {
+  constructor(public name: string) {}
+
+  printName(): void {
+    console.log("Department name: " + this.name);
+  }
+
+  abstract printMeeting(): void; // must be implemented in derived classes
+}
+
+class AccountingDepartment extends Department {
+  constructor() {
+    super("Accounting and Auditing"); // constructors in derived classes must call super()
+  }
+
+  printMeeting(): void {
+    console.log("The Accounting Department meets each Monday at 10am.");
+  }
+
+  generateReports(): void {
+    console.log("Generating accounting reports...");
+  }
+}
+```
