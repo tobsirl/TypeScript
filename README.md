@@ -246,3 +246,10 @@ class AccountingDepartment extends Department {
   }
 }
 ```
+
+### Inheritance vs Composition
+#### Inheritance **is a**
+Classes and objects created through inheritance are *tightly coupled* because changing the parent or superclass in an inheritance relationship risks breaking your code.
+
+#### Composition **has a**
+Classes and objects created through composition are *loosely coupled*, meaning that you can more easily change the component parts without breaking your code.
