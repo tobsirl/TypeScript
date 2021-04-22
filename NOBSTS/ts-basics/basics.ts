@@ -1,5 +1,5 @@
 let userName = 'Paul';
-let hasLoggedIn = true;
+let hasLoggedIn: boolean = true;
 
 hasLoggedIn += ' Tobin';
 
