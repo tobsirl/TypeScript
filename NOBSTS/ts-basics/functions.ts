@@ -3,3 +3,6 @@ function addNumbers(a: number, b: number): number {
 }
 
 export default addNumbers;
+
+export const addStrings = (str1: string, str2: string): string =>
+  `${str1}  ${str2}`;
