@@ -1,5 +1,5 @@
-function addNumbers(a: number, b: number): number {
-  return a + b;
+function addNumbers(x: number, z: number): number {
+  return x + z;
 }
 
 export default addNumbers;
