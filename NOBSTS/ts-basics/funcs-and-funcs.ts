@@ -3,7 +3,7 @@ export function printToFile(text: string, callback: () => void): void {
   callback();
 }
 
-type MutateFunction = (v: number) => number;
+export type MutateFunction = (v: number) => number;
 
 export function arrayMutate(
   numbers: number[],
@@ -13,3 +13,5 @@ export function arrayMutate(
 }
 
 arrayMutate([1, 2, 3], (v) => v * 2); //?
+
+const myNewMutateFunction: MutateFunction = (v: number) => v * 100;
