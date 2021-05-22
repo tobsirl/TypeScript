@@ -3,9 +3,11 @@ export function printToFile(text: string, callback: () => void): void {
   callback();
 }
 
+type MutateFunction = (v: number) => number;
+
 export function arrayMutate(
   numbers: number[],
-  mutate: (v: number) => number
+  mutate: MutateFunction
 ): number[] {
   return numbers.map(mutate);
 }
