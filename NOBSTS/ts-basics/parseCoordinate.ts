@@ -8,3 +8,7 @@ function parseCoordinateFromObject(obj: Coordinate): Coordinate {
     ...obj,
   };
 }
+
+function parseCoordinateFromNumbers(x: number, y: number): Coordinate {
+  return { x, y };
+}
