@@ -16,6 +16,11 @@ function parseCoordinateFromNumbers(x: number, y: number): Coordinate {
 
 function parseCoordinate(obj: Coordinate): Coordinate;
 function parseCoordinate(x: number, y: number): Coordinate;
-function parseCoordinate(arg1: unknown, arg2: unknown): Coordinate {
-  return
+function parseCoordinate(arg1: unknown, arg2?: unknown): Coordinate {
+  let coord: Coordinate = {
+    x: 0,
+    y: 0,
+  };
+
+  return coord;
 }
