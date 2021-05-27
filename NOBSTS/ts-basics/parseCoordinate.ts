@@ -22,5 +22,16 @@ function parseCoordinate(arg1: unknown, arg2?: unknown): Coordinate {
     y: 0,
   };
 
+  if (typeof arg1 === 'object') {
+    coord = {
+      ...(arg1 as Coordinate),
+    };
+  } else {
+    coord = {
+      x: arg1 as number,
+      y: arg2 as number,
+    };
+  }
+
   return coord;
 }
