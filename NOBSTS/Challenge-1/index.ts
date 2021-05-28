@@ -22,6 +22,17 @@ function findHouses(
   filter: (house: House) => boolean
 ): HouseWithID[];
 
+function findHouses(
+  input: string | House[],
+  filter?: (house: House) => boolean
+): HouseWithID[] {
+  const houses: House[] = typeof input === 'string' ? JSON.parse(input) : input;
+  return (filter ? houses.filter(filter) : houses).map((house) => ({
+    id: 0,
+    ...house,
+  }));
+}
+
 console.log(
   findHouses(JSON.stringify(houses), ({ name }) => name === 'Atreides')
 );
