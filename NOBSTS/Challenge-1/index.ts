@@ -5,22 +5,20 @@ interface House {
   planets: string | string[];
 }
 
-interface HouseWithID {
+interface HouseWithID extends House {
   id: number;
-  name: string;
-  planets: string | string[];
 }
 
-function findHouses(houses: string): HouseWithID[];
-function findHouses(
-  houses: string,
-  filter: (house: House) => boolean
-): HouseWithID[];
-function findHouses(houses: House[]): HouseWithID[];
-function findHouses(
-  houses: House[],
-  filter: (house: House) => boolean
-): HouseWithID[];
+// function findHouses(houses: string): HouseWithID[];
+// function findHouses(
+//   houses: string,
+//   filter: (house: House) => boolean
+// ): HouseWithID[];
+// function findHouses(houses: House[]): HouseWithID[];
+// function findHouses(
+//   houses: House[],
+//   filter: (house: House) => boolean
+// ): HouseWithID[];
 
 function findHouses(
   input: string | House[],
