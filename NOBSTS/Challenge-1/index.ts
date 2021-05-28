@@ -1,8 +1,15 @@
 import houses from './houses';
 
-interface House {}
+interface House {
+  name: string;
+  planets: string | string[];
+}
 
-interface HouseWithID {}
+interface HouseWithID {
+  id: number;
+  name: string;
+  planets: string | string[];
+}
 
 function findHouses(houses: string): HouseWithID[];
 function findHouses(
