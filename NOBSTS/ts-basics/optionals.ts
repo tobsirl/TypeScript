@@ -34,3 +34,11 @@ function getEmail(user: User): string {
 function getEmailEasy(user: User): string {
   return user?.info?.email ?? '';
 }
+
+// optional callbacks
+function addWithCallback(x: number, y: number, callback?: () => void) {
+  console.log([x, y]);
+  if (callback) {
+    callback?.();
+  }
+}
