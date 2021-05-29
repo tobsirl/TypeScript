@@ -26,7 +26,11 @@ interface User {
 
 function getEmail(user: User): string {
   if (user.info) {
-    return user.info.email;
+    return user.info.email!;
   }
   return '';
+}
+
+function getEmailEasy(user: User): string {
+  return user?.info?.email ?? '';
 }
