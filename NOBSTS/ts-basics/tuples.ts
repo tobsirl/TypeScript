@@ -9,3 +9,20 @@ function add3DCoordinate(
 }
 
 add3DCoordinate([0, 100, 0], [10, 20, 30]);
+
+function simpleStringState(
+  initial: string
+): [() => string, (v: string) => void] {
+  let str: string = initial;
+  return [
+    () => str,
+    (v: string) => {
+      str = v;
+    },
+  ];
+}
+
+const [str1getter, str1setter] = simpleStringState('hello');
+console.log(str1getter());
+str1setter('goodbye');
+console.log(str1getter());
