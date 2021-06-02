@@ -19,3 +19,18 @@ const [st2getter, st2setter] = simpleState<string | null>(null);
 console.log(st2getter());
 st2setter('string');
 console.log(st2getter());
+
+// Example Ranker
+function ranker<RankItem>(
+  items: RankItem[],
+  rank: (v: RankItem) => number
+): RankItem[] {
+  const ranks = items.map((item) => ({
+    item,
+    rank: rank(item),
+  }));
+  
+  ranks.sort((a, b) => a.rank - b.rank);
+
+  return ranks.map((rank) => rank.item);
+}
