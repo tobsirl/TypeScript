@@ -66,3 +66,4 @@ mapById([
  * Omit
  * Constructs a type by picking all properties from Type and then removing Keys (string literal or union of string literals).
  */
+type UserWithoutID = Omit<MyUser, 'id'>;
