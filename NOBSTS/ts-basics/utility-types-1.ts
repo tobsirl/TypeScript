@@ -6,7 +6,7 @@ interface MyUser {
   phone?: string;
 }
 
-// partial
+// Partial
 // Constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type.
 type MyUserOptionals = Partial<MyUser>;
 
@@ -22,6 +22,10 @@ merge(
   { name: 'notJack', id: 'notFoo', email: 'notjack@gmail.com' }
 );
 
-// required
+// Required
 // Constructs a type consisting of all properties of Type set to required. The opposite of Partial.
 type RequiredMyUser = Required<MyUser>;
+
+// Pick
+// Constructs a type by picking the set of properties Keys (string literal or union of string literals) from Type.
+type JustNameAndEmail = Pick<MyUser, 'name' | 'email'>;
