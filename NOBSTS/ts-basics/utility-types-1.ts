@@ -6,6 +6,8 @@ interface MyUser {
   phone?: string;
 }
 
+// partial
+// Constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type.
 type MyUserOptionals = Partial<MyUser>;
 
 const merge = (user: MyUser, overrides: MyUserOptionals): MyUser => {
@@ -20,5 +22,6 @@ merge(
   { name: 'notJack', id: 'notFoo', email: 'notjack@gmail.com' }
 );
 
-// partial
-// Constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type.
+// required
+// Constructs a type consisting of all properties of Type set to required. The opposite of Partial.
+type RequiredMyUser = Required<MyUser>;
