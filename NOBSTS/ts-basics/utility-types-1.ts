@@ -41,11 +41,12 @@ type JustNameAndEmail = Pick<MyUser, 'name' | 'email'>;
  * Constructs an object type whose property keys are Keys and whose property values are Type.
  * This utility can be used to map the properties of a type to another type.
  */
-const mapById = (users: MyUser[]): Record<string, MyUser> => {
+const mapById = (users: MyUser[]): Record<string, Omit<MyUser, 'id'>> => {
   return users.reduce((accum, user) => {
+    const { id, ...other } = user;
     return {
       ...accum,
-      [user.id]: user,
+      [id]: other,
     };
   }, {});
 };
@@ -60,3 +61,8 @@ mapById([
     name: 'Mr. Baz',
   },
 ]);
+
+/**
+ * Omit
+ * Constructs a type by picking all properties from Type and then removing Keys (string literal or union of string literals).
+ */
