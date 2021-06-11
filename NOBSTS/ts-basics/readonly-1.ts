@@ -1,7 +1,9 @@
 interface Cat {
-  readonly name: string;
+  name: string;
   breed: string;
 }
+
+type ReadonlyCat = Readonly<Cat>;
 
 function makeCat(name: string, breed: string): Cat {
   return {
