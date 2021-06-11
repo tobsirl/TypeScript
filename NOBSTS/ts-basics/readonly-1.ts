@@ -1,5 +1,5 @@
 interface Cat {
-  name: string;
+  readonly name: string;
   breed: string;
 }
 
