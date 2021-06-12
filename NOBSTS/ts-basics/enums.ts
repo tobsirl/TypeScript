@@ -1,7 +1,13 @@
-const beforeLoad = 'beforeLoad';
-const loading = 'loading';
-const loaded = 'loaded';
+// const beforeLoad = 'beforeLoad';
+// const loading = 'loading';
+// const loaded = 'loaded';
 
-const isLoading = (state: string) => state === loading;
+enum LoadingState {
+  beforeLoad = 'beforeLoad',
+  loading = 'loading',
+  loaded = 'loaded',
+}
+
+const isLoading = (state: LoadingState) => state === LoadingState.loading;
 
 isLoading('dog');
