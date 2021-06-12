@@ -17,7 +17,7 @@ const isLoading = (state: LoadingState) => state === LoadingState.loading;
 isLoading(LoadingState.beforeLoad); //?
 
 // Literal Types
-function rollDice(dice: number): number {
+function rollDice(dice: 1 | 2 | 3): number {
   let pip = 0;
   for (let i = 0; i < dice; i++) {
     pip += Math.floor(Math.random() * 5) + 1;
@@ -25,4 +25,4 @@ function rollDice(dice: number): number {
   return pip;
 }
 
-rollDice(4); //?
+rollDice(3); //?
