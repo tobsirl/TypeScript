@@ -8,6 +8,10 @@ enum LoadingState {
   loaded = 'loaded',
 }
 
+const englishLoadingStates = {
+  [LoadingState.beforeLoad]: 'Before Load',
+};
+
 const isLoading = (state: LoadingState) => state === LoadingState.loading;
 
-isLoading('dog');
+isLoading(LoadingState.beforeLoad);
