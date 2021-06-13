@@ -4,5 +4,15 @@ interface Database {
 }
 
 class InMemoryDatabase implements Database {
-
+  db: Record<string, string> = {};
+  get(id: string): string {
+    return this.db[id];
+  }
+  set(id: string, value: string): void {
+    this.db[id] = value;
+  }
 }
+
+const myDB = new InMemoryDatabase();
+myDB.set('foo', 'bar');
+myDB.db; //?
