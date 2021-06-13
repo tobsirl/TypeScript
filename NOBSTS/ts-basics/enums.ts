@@ -28,10 +28,10 @@ function rollDice(dice: 1 | 2 | 3): number {
 rollDice(3); //?
 
 // String Literals
-function sendEvent(name: 'addToCart', data: { productId: number }): void;
-function sendEvent(name: 'checkout', data: { cartCount: number }): void;
-function sendEvent(name: string, data: unknown): void {
-  console.log(`${name}: ${JSON.stringify(data)}`);
-}
+// function sendEvent(name: 'addToCart', data: { productId: number }): void;
+// function sendEvent(name: 'checkout', data: { cartCount: number }): void;
+// function sendEvent(name: string, data: unknown): void {
+//   console.log(`${name}: ${JSON.stringify(data)}`);
+// }
 
-sendEvent('addToCart', { productId: 2343 });
+// sendEvent('addToCart', { productId: 2343 });
