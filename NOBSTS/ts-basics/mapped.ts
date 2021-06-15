@@ -17,3 +17,4 @@ type OptionsFlags<Type> = {
   [Property in keyof Type]: boolean;
 };
 
+type DogInfoOptions = OptionsFlags<DogInfo>;
