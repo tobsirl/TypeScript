@@ -13,11 +13,16 @@ class DogList {
 
   private constructor() {}
 
-  public addDog(dog: Doggy) {
-    this.doggies.push(dog);
+  static addDog(dog: Doggy) {
+    DogList.instance.doggies.push(dog);
+  }
+
+  getDogs() {
+    return this.doggies;
   }
 }
 
-DogList.instance.addDog(rex);
+DogList.addDog(rex);
+DogList.instance.getDogs(); 
 
 // const dl = new DogList();
