@@ -1,5 +1,5 @@
 class Doggy {
-  constructor(name: string, age: number) {
-    
+  constructor(public name: string, public age: number) {
+
   }
 }
