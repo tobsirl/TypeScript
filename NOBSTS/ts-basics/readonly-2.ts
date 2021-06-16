@@ -10,10 +10,14 @@ class DogList {
   private doggies: Doggy[] = [];
 
   static instance: DogList = new DogList();
-  
+
   private constructor() {}
+
+  public addDog(dog: Doggy) {
+    this.doggies.push(dog);
+  }
 }
 
-DogList.instance;
+DogList.instance.addDog(rex);
 
-const dl = new DogList();
+// const dl = new DogList();
