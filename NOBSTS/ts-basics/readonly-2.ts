@@ -9,7 +9,11 @@ rex;
 class DogList {
   private doggies: Doggy[] = [];
 
-  public instance: DogList = new DogList();
+  static instance: DogList = new DogList();
+  
+  private constructor() {}
 }
 
 DogList.instance;
+
+const dl = new DogList();
