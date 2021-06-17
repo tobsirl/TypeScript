@@ -7,3 +7,21 @@ function myLogFunction() {
 const logger = myLogFunction();
 
 logger('your string');
+
+function createLoggerClass() {
+  return class MyLoggerClass {
+    private completeLog: string = '';
+    log(str: string) {
+      console.log(str);
+      this.completeLog += str + '\n';
+    }
+    dumpLog() {
+      return this.completeLog;
+    }
+  };
+}
+
+const MyLogger = createLoggerClass();
+const logger2 = new MyLogger();
+logger2.log('Foo');
+logger2.dumpLog(); 
