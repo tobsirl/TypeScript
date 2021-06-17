@@ -43,3 +43,8 @@ function CreateSimpleMemoryDatabase<T>() {
     }
   };
 }
+
+const StringDatabase = CreateSimpleMemoryDatabase<string>();
+
+const sbd1 = new StringDatabase();
+sbd1.set('a', 'hello');
