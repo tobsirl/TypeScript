@@ -48,3 +48,13 @@ const StringDatabase = CreateSimpleMemoryDatabase<string>();
 
 const sbd1 = new StringDatabase();
 sbd1.set('a', 'hello');
+
+type Constructor = new (...args: any[]) => any;
+
+function Dumpable<T extends Constructor>(Base: T) {
+  return class Dumpable extends Base {
+    dump() {
+      console.log(this.getObject());
+    }
+  };
+}
