@@ -1,18 +1,14 @@
-class EventProcessor {
-  handleEvent(eventName: ..., data: ...): void {
-  }
+class EventProcessor<T extends {}> {
+  handleEvent<K extends keyof T>(eventName: K, data: T[K]): void {}
 
-  addFilter(
-    eventName: ...,
-    filter: (data: ...) => boolean
-  ): void {
-  }
+  addFilter<K extends keyof T>(
+    eventName: K,
+    filter: (data: T[K]) => boolean
+  ): void {}
 
-  addMap(eventName: ..., map: (data: ...) => ...): void {
-  }
+  addMap<K extends keyof T>(eventName: K, map: (data: T[K]) => T[K]): void {}
 
-  getProcessedEvents() {
-  }
+  getProcessedEvents() {}
 }
 
 interface EventMap {
@@ -24,23 +20,23 @@ class UserEventProcessor extends EventProcessor<EventMap> {}
 
 const uep = new UserEventProcessor();
 
-uep.addFilter("login", ({ user }) => Boolean(user));
+uep.addFilter('login', ({ user }) => Boolean(user));
 
-uep.addMap("login", (data) => ({
+uep.addMap('login', (data) => ({
   ...data,
   hasSession: Boolean(data.user && data.name),
 }));
 
-uep.handleEvent("login", {
+uep.handleEvent('login', {
   user: null,
-  name: "jack",
+  name: 'jack',
 });
-uep.handleEvent("login", {
-  user: "tom",
-  name: "tomas",
+uep.handleEvent('login', {
+  user: 'tom',
+  name: 'tomas',
 });
-uep.handleEvent("logout", {
-  user: "tom",
+uep.handleEvent('logout', {
+  user: 'tom',
 });
 
 console.log(uep.getProcessedEvents());
