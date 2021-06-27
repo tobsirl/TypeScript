@@ -8,5 +8,14 @@ let myNumber: number = 10;
 let myRegex: RegExp = /foo/;
 
 // Typing arrays
-const names: string[] = userName.split('');
+const names: string[] = userName.split(' ');
 const myValues: Array<number> = [1, 2, 3];
+
+// Objects
+const myPerson: {
+  first: string;
+  last: string;
+} = {
+  first: 'Jack',
+  last: 'Herrington',
+};
