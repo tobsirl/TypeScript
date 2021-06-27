@@ -12,10 +12,12 @@ const names: string[] = userName.split(' ');
 const myValues: Array<number> = [1, 2, 3];
 
 // Objects
-const myPerson: {
+interface Person {
   first: string;
   last: string;
-} = {
+}
+
+const myPerson: Person = {
   first: 'Jack',
   last: 'Herrington',
 };
