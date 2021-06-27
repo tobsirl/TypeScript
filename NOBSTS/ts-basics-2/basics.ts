@@ -21,3 +21,10 @@ const myPerson: Person = {
   first: 'Jack',
   last: 'Herrington',
 };
+
+const ids: Record<number, string> = {
+  10: 'a',
+  20: 'b',
+};
+
+ids[30] = 'c';
