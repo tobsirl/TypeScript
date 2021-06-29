@@ -13,3 +13,10 @@ export function arrayMutate(
 }
 
 arrayMutate([1, 2, 3], (v) => v * 2);
+
+export function createAdder(num: number) {
+  return (val: number) => num + val;
+}
+
+const addOne = createAdder(1);
+addOne(44);
