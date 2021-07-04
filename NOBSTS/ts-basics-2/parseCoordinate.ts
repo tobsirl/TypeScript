@@ -15,3 +15,9 @@ function parseCoordinateFromNumbers(x: number, y: number): Coordinate {
     y,
   };
 }
+
+function parseCoordinate(obj: Coordinate): Coordinate;
+function parseCoordinate(x: number, y: number): Coordinate;
+function parseCoordinate(arg1: unknown, arg2: unknown): Coordinate {
+  
+}
