@@ -14,7 +14,7 @@ export function arrayMutate(
 
 arrayMutate([1, 2, 3], (v) => v * 2);
 
-export function createAdder(num: number) {
+export function createAdder(num: number): (val: number) => number {
   return (val: number) => num + val;
 }
 
