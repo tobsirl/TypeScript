@@ -5,3 +5,6 @@ let bestSong = Math.random() > 0.5 ? 'My Way' : 'My Heart Will Go On';
 
 let firstName = 'John';
 firstName = 'Jane';
+
+let lastName = 'King';
+lastName = true;
