@@ -12,3 +12,5 @@ lastName = true;
 
 // Type Annotations
 let rocker; // Type any
+rocker = 'Joan Jett'; // Type string
+rocker.toUpperCase(); // Ok
