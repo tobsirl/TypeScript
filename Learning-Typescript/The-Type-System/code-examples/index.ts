@@ -32,3 +32,11 @@ rapper.length; // Ok
 
 rapper.push('!');
 // Error: Property 'push' does not exist on type 'string'.
+
+let cher = {
+  firstName: 'Cherilyn',
+  lastName: 'Sarkisian',
+};
+
+cher.middleName;
+// Property 'middleName' does not exist on type '{ firstName: string; lastName: string; }'.
