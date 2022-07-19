@@ -18,5 +18,8 @@ rocker.toUpperCase(); // Ok
 rocker = 19.58; // Type number
 rocker.toPrecision(2); // Ok
 
-rocker.toUpperCase(); 
+rocker.toUpperCase();
 // Error: Property 'toUpperCase' does not exist on type 'number'.
+
+let rockstar: string; // Type string
+rockstar = 'Joan Jett';
