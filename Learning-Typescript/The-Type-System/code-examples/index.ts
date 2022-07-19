@@ -14,3 +14,6 @@ lastName = true;
 let rocker; // Type any
 rocker = 'Joan Jett'; // Type string
 rocker.toUpperCase(); // Ok
+
+rocker = 19.58; // Type number
+rocker.toPrecision(2); // Ok
