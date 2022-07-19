@@ -25,3 +25,7 @@ let rockstar: string; // Type string
 rockstar = 'Joan Jett';
 rockstar = 19.58;
 // Error: Type 'number' is not assignable to type 'string'.
+
+// Type Shapes
+let rapper = 'Queen Latifah';
+rapper.length; // Ok
