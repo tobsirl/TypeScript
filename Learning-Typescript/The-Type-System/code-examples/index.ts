@@ -29,3 +29,6 @@ rockstar = 19.58;
 // Type Shapes
 let rapper = 'Queen Latifah';
 rapper.length; // Ok
+
+rapper.push('!');
+// Error: Property 'push' does not exist on type 'string'.
