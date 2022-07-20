@@ -41,3 +41,17 @@ let inventer: number | string = 'Hedy Lamarr';
 inventer.toUpperCase(); // Ok: string
 inventer.toFixed();
 // Error: Property 'toFixed' does not exist on type 'string'.
+
+// Conditional Checks
+// Type of scientist is string | number
+let scientist = Math.random() > 0.5 ? 'Rosalind Franklin' : 51;
+
+if (scientist === 'Rosalind Franklin') {
+  // typeof scientist is string
+  scientist.toUpperCase();
+}
+
+// type of scientist is number | string
+scientist.toUpperCase();
+// Error: Property 'toUpperCase' does not exist on type 'string | number'.
+// Property 'toUpperCase' does not exist on type 'number'.
