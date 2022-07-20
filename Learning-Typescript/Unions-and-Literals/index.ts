@@ -36,3 +36,8 @@ admiral = 'Grace Hopper';
 admiral.toUpperCase();
 admiral.toFixed();
 // Error: Property 'toFixed' does not exist on type 'string'.
+
+let inventer: number | string = 'Hedy Lamarr';
+inventer.toUpperCase(); // Ok: string
+inventer.toFixed();
+// Error: Property 'toFixed' does not exist on type 'string'.
