@@ -90,3 +90,6 @@ const firstName: string = null;
 let nameMaybe = Math.random() > 0.5 ? 'Tony Hoare' : undefined;
 nameMaybe.toUpperCase();
 // Potential runtime error: Cannot read property 'toUpperCase' of undefined.
+
+nameMaybe.toLowerCase();
+// Error: Object is possibly 'undefined'.
