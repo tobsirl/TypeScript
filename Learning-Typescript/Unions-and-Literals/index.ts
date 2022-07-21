@@ -62,3 +62,14 @@ let researcher = Math.random() > 0.5 ? 'Rosalind Franklin' : 51;
 if (typeof researcher === 'string') {
   researcher.toUpperCase(); // Ok: string
 }
+
+// Literal Types
+const philosopher = 'Hypatia';
+
+let lifespan: number | 'ongoing' | 'uncertain';
+
+lifespan = 89; // Ok
+lifespan = 'ongoing'; // Ok
+
+lifespan = true;
+// Error: Type 'boolean' is not assignable to type 'number | "ongoing" | "uncertain".
