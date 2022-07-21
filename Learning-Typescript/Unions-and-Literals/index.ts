@@ -99,3 +99,8 @@ let geneticist = Math.random() > 0.5 ? 'Barbara McClintock' : undefined;
 if (geneticist) {
   geneticist.toUpperCase(); // Ok
 }
+
+let mathematician2: string | undefined;
+mathematician2?.length; // Ok
+mathematician2 = 'Mark Goldberg';
+mathematician2.length; // Ok
