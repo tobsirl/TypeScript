@@ -83,3 +83,10 @@ specificallyAda = 'Byron';
 let something = '';
 specificallyAda = something;
 // Error: Type 'string' is not assignable to type '"Ada"'.
+
+// Strict Null Checking
+const firstName: string = null;
+
+let nameMaybe = Math.random() > 0.5 ? 'Tony Hoare' : undefined;
+nameMaybe.toUpperCase();
+// Potential runtime error: Cannot read property 'toUpperCase' of undefined.
