@@ -93,3 +93,9 @@ nameMaybe.toUpperCase();
 
 nameMaybe.toLowerCase();
 // Error: Object is possibly 'undefined'.
+
+// Truthiness Narrowing
+let geneticist = Math.random() > 0.5 ? 'Barbara McClintock' : undefined;
+if (geneticist) {
+  geneticist.toUpperCase(); // Ok
+}
