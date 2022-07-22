@@ -104,3 +104,11 @@ let mathematician2: string | undefined;
 mathematician2?.length; // Ok
 mathematician2 = 'Mark Goldberg';
 mathematician2.length; // Ok
+
+// Variables without initial values
+let mathematician3: string;
+mathematician3?.length; 
+// Error: Variable 'mathematician3' is used before being assigned.
+
+mathematician3 = 'Mark Goldberg';
+mathematician3.length; // Ok
