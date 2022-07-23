@@ -39,3 +39,23 @@ poetLater = {
 
 poetLater2 = 'Emily Dickinson';
 // Error: Type '"Emily Dickinson"' is not assignable to type 'Poet'
+
+// Structural Typing
+type withFirstName = {
+  firstName: string;
+};
+
+type withLastName = {
+  lastName: string;
+};
+
+const hasBoth = {
+  firstName: 'Lucille',
+  lastName: 'Clifton',
+};
+
+// Ok: 'hasBoth' contains a 'firstName' of type 'string'
+let withFirstName: withFirstName = hasBoth;
+
+// Ok 'hasBoth' contains a 'lastName' of type 'string'
+let withLastName: withLastName = hasBoth;
