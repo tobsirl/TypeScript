@@ -23,5 +23,19 @@ poetLater = {
   name: 'Mary Oliver',
 };
 
-poetLater = 'Sappho'; 
+poetLater = 'Sappho';
 // Error: Type '"Sappho"' is not assignable to type '{ born: number; name: string; }'
+
+type Poet = {
+  born: number;
+  name: string;
+};
+
+let poetLater2: Poet; // Ok
+poetLater = {
+  born: 1935,
+  name: 'Sara Teasdale',
+};
+
+poetLater2 = 'Emily Dickinson';
+// Error: Type '"Emily Dickinson"' is not assignable to type 'Poet'
