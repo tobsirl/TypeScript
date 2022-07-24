@@ -94,13 +94,13 @@ type ChessPlayer = {
 // Ok: all fields match what's expected in ChessPlayer
 const chessMatch: ChessPlayer = {
   born: 1935,
-  name: 'Karpov',
+  name: 'Matt',
 };
 
 const extraProperty: ChessPlayer = {
   actions: 'opening',
   born: 1935,
-  name: 'Karpov',
+  name: 'Frank',
 };
 
 /**
@@ -109,3 +109,11 @@ const extraProperty: ChessPlayer = {
  * Object literal may only specify known properties,
  * and 'actions' does not exist in type 'ChessPlayer'
  */
+
+const existingObject = {
+  activity: 'playing chess',
+  born: 1935,
+  name: 'Paul',
+};
+
+const extraPropertyButOk: ChessPlayer = existingObject;
