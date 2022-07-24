@@ -75,3 +75,12 @@ const hasOnlyOne: FirstAndLastName = {
   first: 'Lucille',
 };
 // Property 'last' is missing in type '{ first: string; }' but required in type 'FirstAndLastName'
+
+type TimeRange = {
+  start: Date;
+};
+
+const hasStartString: TimeRange = {
+  start: '2020-01-01',
+  // Error: Type 'string' is not assignable to type 'Date'
+};
