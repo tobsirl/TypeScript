@@ -59,3 +59,19 @@ let withFirstName: withFirstName = hasBoth;
 
 // Ok 'hasBoth' contains a 'lastName' of type 'string'
 let withLastName: withLastName = hasBoth;
+
+// Usage Checking
+type FirstAndLastName = {
+  first: string;
+  last: string;
+};
+
+const hasBoth1: FirstAndLastName = {
+  first: 'Lucille',
+  last: 'Clifton',
+};
+
+const hasOnlyOne: FirstAndLastName = {
+  first: 'Lucille',
+};
+// Property 'last' is missing in type '{ first: string; }' but required in type 'FirstAndLastName'
