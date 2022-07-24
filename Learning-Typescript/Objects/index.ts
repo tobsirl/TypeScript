@@ -84,3 +84,28 @@ const hasStartString: TimeRange = {
   start: '2020-01-01',
   // Error: Type 'string' is not assignable to type 'Date'
 };
+
+// Excess Property Checking
+type ChessPlayer = {
+  born: number;
+  name: 'Karpov';
+};
+
+// Ok: all fields match what's expected in ChessPlayer
+const chessMatch: ChessPlayer = {
+  born: 1935,
+  name: 'Karpov',
+};
+
+const extraProperty: ChessPlayer = {
+  actions: 'opening',
+  born: 1935,
+  name: 'Karpov',
+};
+
+/**
+ * Error: Type '{ actions: string; born: number; name: string; }'
+ * is not assignable to type 'ChessPlayer'
+ * Object literal may only specify known properties,
+ * and 'actions' does not exist in type 'ChessPlayer'
+ */
