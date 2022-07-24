@@ -135,3 +135,35 @@ const poemMatch: Poem = {
   },
   name: 'The Old Rose',
 };
+
+const poemMismatch: Poem = {
+  author: {
+    name: 'Sylvia Plath', 
+  }
+  // Error: Type '{ name: string; }' is not assignable 
+  // to type '{ firstName: string; lastName: string; }'
+  // Object literal may only specify known properties, and 'name' 
+  // does not exist in type '{ firstName: string; lastName: string; }'
+  name: 'Tulips'
+}
+
+type Author = {
+  firstName: string;
+  lastName: string;
+}
+
+type Poem1 = {
+  author: Author;
+  name: string;
+}
+
+const poemMismatch1: Poem1 = {
+  author: {
+    name: 'Sylvia Plath',
+  }
+  // Error: Type '{ name: string; }' is not assignable to type 'Author'
+  // Object literal may only specify known properties, and 'name' 
+  // does not exist in type 'Author'
+  name: 'Tulips',
+}
+
