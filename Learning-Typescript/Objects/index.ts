@@ -117,3 +117,21 @@ const existingObject = {
 };
 
 const extraPropertyButOk: ChessPlayer = existingObject;
+
+// Nested Object Types
+type Poem = {
+  author: {
+    firstName: string;
+    lastName: string;
+  };
+  name: string;
+};
+
+// Ok
+const poemMatch: Poem = {
+  author: {
+    firstName: 'Emily',
+    lastName: 'Dickinson',
+  },
+  name: 'The Old Rose',
+};
