@@ -240,4 +240,12 @@ const poemExplicit: PoemPageRhymes = Math.random() > 0.5
   ? { name: "The Double Image", pages: 7 }
   : { name: "Her Kind", rhymes: true };
 
-  poemExplicit.name // Ok
+poemExplicit.name // Ok
+
+poemExplicit.pages;
+// Error: Property 'pages' does not exist on type PoemWithPages
+// Property 'pages' does not exist on type PoemWithRhymes
+
+poemExplicit.rhymes;
+// Error: Property 'rhymes' does not exist on type PoemWithPages
+// Property 'rhymes' does not exist on type PoemWithRhymes
