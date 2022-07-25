@@ -198,3 +198,23 @@ const hasRequired: Writers = {
 
 const missingRequired: Writers = {}
 // Error: Property 'author' is missing in type '{}' but required in type 'Writers'
+
+// *Unions of Object Types
+// Inferred Object Type Unions
+const poemName = Math.random() > 0.5 
+? {name: "The Double Image", pages: 7} 
+: {name: "Her Kind", rhymes: true};
+/**
+ * Type:
+ * {
+ *  name: string;
+ *  pages: number;
+ *  rhymes?: undefined;
+ * }
+ * |
+ * {
+ *  name: string;
+ *  pages?: undefined;
+ *  rhymes: boolean;
+ * }
+ */
