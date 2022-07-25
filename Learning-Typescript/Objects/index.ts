@@ -218,3 +218,18 @@ const poemName = Math.random() > 0.5
  *  rhymes: boolean;
  * }
  */
+
+poemName.name; // Type: string
+poemName.pages; // Type: number | undefined
+poemName.rhymes // Type: boolean | undefined
+
+// *Explicit Object Type Unions
+type PoemWithPages = {
+  name: string;
+  pages: number;
+}
+
+type PoemWithRhymes = {
+  name: string;
+  rhymes: boolean;
+}
