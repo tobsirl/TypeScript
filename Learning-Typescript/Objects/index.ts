@@ -233,3 +233,11 @@ type PoemWithRhymes = {
   name: string;
   rhymes: boolean;
 }
+
+type PoemPageRhymes = PoemWithPages | PoemWithRhymes;
+
+const poemExplicit: PoemPageRhymes = Math.random() > 0.5
+  ? { name: "The Double Image", pages: 7 }
+  : { name: "Her Kind", rhymes: true };
+
+  poemExplicit.name // Ok
