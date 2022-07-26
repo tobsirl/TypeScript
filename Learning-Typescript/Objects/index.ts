@@ -280,3 +280,9 @@ poemDiscriminated.type; // Type: 'pages' | 'rhymes'
 poemDiscriminated.pages;
 // Error: Property 'pages' does not exist on type PoemDiscriminatedUnions
 // Property 'pages' does not exist on type PoemWithRhymes
+
+// * Intersection Types
+type Artwork = {
+  genre: string;
+  name: string;
+}
