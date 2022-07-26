@@ -291,3 +291,13 @@ type Writing = {
   pages: number;
   name: string;
 }
+
+type WrittenArt = Artwork & Writing;
+/**
+ * Equivalent to:
+ * {
+ *  genre: string;
+ *  name: string;
+ *  pages: number;
+ * }
+ */
