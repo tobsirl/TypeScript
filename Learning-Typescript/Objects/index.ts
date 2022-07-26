@@ -251,3 +251,8 @@ poemName.rhymes // Type: boolean | undefined
 // Property 'rhymes' does not exist on type PoemWithRhymes
 
 // * Discriminated Unions
+type PoemWithPages = {
+  name: string;
+  pages: number;
+  type: 'pages'
+}
