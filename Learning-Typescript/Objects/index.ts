@@ -274,3 +274,9 @@ if (poemDiscriminated.type === 'pages') {
 } else {
   console.log(`It rhymes: ${poemDiscriminated.rhymes}`);
 }
+
+poemDiscriminated.type; // Type: 'pages' | 'rhymes'
+
+poemDiscriminated.pages;
+// Error: Property 'pages' does not exist on type PoemDiscriminatedUnions
+// Property 'pages' does not exist on type PoemWithRhymes
