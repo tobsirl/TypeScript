@@ -254,5 +254,11 @@ poemName.rhymes // Type: boolean | undefined
 type PoemWithPages = {
   name: string;
   pages: number;
-  type: 'pages'
+  type: 'pages';
+}
+
+type PoemWithRhymes = {
+  name: string;
+  rhymes: boolean;
+  type: 'rhymes';
 }
