@@ -224,28 +224,30 @@ poemName.pages; // Type: number | undefined
 poemName.rhymes // Type: boolean | undefined
 
 // *Explicit Object Type Unions
-type PoemWithPages = {
-  name: string;
-  pages: number;
-}
+// type PoemWithPages = {
+//   name: string;
+//   pages: number;
+// }
 
-type PoemWithRhymes = {
-  name: string;
-  rhymes: boolean;
-}
+// type PoemWithRhymes = {
+//   name: string;
+//   rhymes: boolean;
+// }
 
-type PoemPageRhymes = PoemWithPages | PoemWithRhymes;
+// type PoemPageRhymes = PoemWithPages | PoemWithRhymes;
 
-const poemExplicit: PoemPageRhymes = Math.random() > 0.5
-  ? { name: "The Double Image", pages: 7 }
-  : { name: "Her Kind", rhymes: true };
+// const poemExplicit: PoemPageRhymes = Math.random() > 0.5
+//   ? { name: "The Double Image", pages: 7 }
+//   : { name: "Her Kind", rhymes: true };
 
-poemExplicit.name // Ok
+// poemExplicit.name // Ok
 
-poemExplicit.pages;
+// poemExplicit.pages;
 // Error: Property 'pages' does not exist on type PoemWithPages
 // Property 'pages' does not exist on type PoemWithRhymes
 
-poemExplicit.rhymes;
+// poemExplicit.rhymes;
 // Error: Property 'rhymes' does not exist on type PoemWithPages
 // Property 'rhymes' does not exist on type PoemWithRhymes
+
+// * Discriminated Unions
