@@ -262,3 +262,9 @@ type PoemWithRhymes = {
   rhymes: boolean;
   type: 'rhymes';
 }
+
+type PoemDiscriminatedUnions = PoemWithPages | PoemWithRhymes;
+
+const poemDiscriminated: PoemDiscriminatedUnions = Math.random() > 0.5
+  ? { name: "The Double Image", pages: 7, type: 'pages' }
+  : { name: "Her Kind", rhymes: true, type: 'rhymes' };
