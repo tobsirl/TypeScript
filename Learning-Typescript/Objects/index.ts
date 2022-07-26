@@ -305,3 +305,10 @@ type ShortPoem = { author: string } & (
   | { kigo: string; type: 'haiku' }
   | { meter: number; type: 'villanelle'}
 );
+
+// Ok
+const morningGlory: ShortPoem = {
+  author: 'Fukuda Chiyo-ni',
+  kigo: 'Morning Glory',
+  type: 'haiku',
+}
