@@ -345,3 +345,6 @@ const oneArt: ShortPoem = {
  * '{ author: string; type: 'villanelle'; }'
  * but required in type '{ meter: number; type: 'villanelle'; }'
  */
+
+type NotPossible = number & string;
+// Type: never
