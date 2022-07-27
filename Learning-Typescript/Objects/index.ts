@@ -325,3 +325,9 @@ const oneArt: ShortPoem = {
  * Property 'meter' is missing in type '{ author: string; type: 'villanelle'; }'
  * but required in type '{ meter: number; type: 'villanelle'; }'
  */
+
+// * Dangers of Intersection Types
+type ShortPoemBase = { author: string };
+type Haiku = ShortPoemBase & { kigo: string; type: 'haiku' };
+type Villanelle = ShortPoemBase & { meter: number; type: 'villanelle' };
+type ShortPoem = Haiku | Villanelle;
