@@ -336,3 +336,12 @@ const oneArt: ShortPoem = {
   author: "Elizabeth Bishop",
   type: "villanelle",
 }
+/**
+ * Type '{ author: string; type: 'villanelle'; }'
+ * is not assignable to type 'ShortPoem'.
+ * Type '{ author: string; type: 'villanelle'; }' 
+ * is not assignable to 'Villanelle'.
+ * Property 'meter' is missing in type
+ * '{ author: string; type: 'villanelle'; }'
+ * but required in type '{ meter: number; type: 'villanelle'; }'
+ */
