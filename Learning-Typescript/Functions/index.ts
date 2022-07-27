@@ -9,8 +9,12 @@ function singTwo(first: string, second: string) {
 }
 
 // Logs: "Ball and Chain / undefined"
-singTwo("Ball and Chain");
+singTwo('Ball and Chain');
 // Error: Expected 2 arguments, but got 1.
 
 // Logs: "I Will Survive / Higher Love"
-singTwo("I Will Survive", "Higher Love"); // Ok
+singTwo('I Will Survive', 'Higher Love'); // Ok
+
+// Logs: "Go your own way / The Chain"
+singTwo('Go your own way', 'The Chain', 'Dreams');
+// Error: Expected 2 arguments, but got 3.
