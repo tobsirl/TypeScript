@@ -1,4 +1,4 @@
 // Function Parameters
-function sing(song) {
+function sing(song: string) {
   console.log(`Singing ${song}`);
 }
