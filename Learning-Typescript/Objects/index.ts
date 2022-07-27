@@ -348,3 +348,9 @@ const oneArt: ShortPoem = {
 
 type NotPossible = number & string;
 // Type: never
+
+let notNumber: NotPossible = 0;
+// Error: Type '0' is not assignable to type 'never'.
+
+let notString: never = "";
+// Error: Type 'string' is not assignable to type 'never'.
