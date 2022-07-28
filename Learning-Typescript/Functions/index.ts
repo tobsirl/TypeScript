@@ -39,3 +39,9 @@ function announceSongBy(song: string, singer: string | undefined) {
     console.log(`Singer: ${singer}`);
   }
 }
+
+announceSongBy('Greensleeves'); // Ok
+// Error: Expected 2 arguments, but got 1.
+
+announceSongBy('Greensleeves', undefined); // Ok
+announceSongBy('Greensleeves', 'Sia'); // Ok
