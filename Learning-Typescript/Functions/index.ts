@@ -61,3 +61,10 @@ rateSong('Set Fire to the Rain', undefined); // Ok
 rateSong('At Last!', '100');
 // Error: Argument of type '"100"' is not assignable
 // to parameter of type 'number | undefined'.
+
+// * Rest Parameters
+function singAllTheSongs(singer: string, ...songs: string[]) {
+  for (const song of songs) {
+    console.log(`${song} by ${singer}`);
+  }
+}
