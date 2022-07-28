@@ -18,3 +18,12 @@ singTwo('I Will Survive', 'Higher Love'); // Ok
 // Logs: "Go your own way / The Chain"
 singTwo('Go your own way', 'The Chain', 'Dreams');
 // Error: Expected 2 arguments, but got 3.
+
+// * Optional Parameters
+function announceSong(song: string, singer?: string) {
+  console.log(`Song: ${song}`);
+
+  if (singer) {
+    console.log(`Singer: ${singer}`);
+  }
+}
