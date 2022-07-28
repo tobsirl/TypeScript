@@ -31,3 +31,11 @@ function announceSong(song: string, singer?: string) {
 announceSong('Greensleeves'); // Ok
 announceSong('Greensleeves', undefined); // Ok
 announceSong('Greensleeves', 'Sia'); // Ok
+
+function announceSongBy(song: string, singer: string | undefined) {
+  console.log(`Song: ${song}`);
+
+  if (singer) {
+    console.log(`Singer: ${singer}`);
+  }
+}
