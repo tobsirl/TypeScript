@@ -45,3 +45,6 @@ announceSongBy('Greensleeves'); // Ok
 
 announceSongBy('Greensleeves', undefined); // Ok
 announceSongBy('Greensleeves', 'Sia'); // Ok
+
+function announceSinger(singer?: string, song: string) {}
+// Error: A required parameter cannot follow an optional parameter.
