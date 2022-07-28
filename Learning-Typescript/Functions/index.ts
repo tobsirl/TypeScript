@@ -57,3 +57,7 @@ function rateSong(song: string, rating = 0) {
 rateSong('Photograph'); // Ok
 rateSong('Set Fire to the Rain', 5); // Ok
 rateSong('Set Fire to the Rain', undefined); // Ok
+
+rateSong('At Last!', '100');
+// Error: Argument of type '"100"' is not assignable
+// to parameter of type 'number | undefined'.
