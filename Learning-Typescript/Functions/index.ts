@@ -48,3 +48,8 @@ announceSongBy('Greensleeves', 'Sia'); // Ok
 
 function announceSinger(singer?: string, song: string) {}
 // Error: A required parameter cannot follow an optional parameter.
+
+// * Default Parameters
+function rateSong(song: string, rating = 0) {
+  console.log(`${song} gets ${rating}/5 stars`);
+}
