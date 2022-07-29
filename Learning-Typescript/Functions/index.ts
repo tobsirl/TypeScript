@@ -84,3 +84,8 @@ function singSongs(songs: string[]) {
   }
   return songs.length;
 }
+
+// Type: (songs: string[], index: number) => string | undefined
+function getSongAt(songs: string[], index: number) {
+  return index < songs.length ? songs[index] : undefined;
+}
