@@ -89,3 +89,8 @@ function singSongs(songs: string[]) {
 function getSongAt(songs: string[], index: number) {
   return index < songs.length ? songs[index] : undefined;
 }
+
+// * Explicit Return Types
+function singSongsRecursive(songs: string[], count = 0): number {
+  return songs.length ? singSongsRecursive(songs.slice(1), count + 1) : count;
+}
