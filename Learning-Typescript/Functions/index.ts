@@ -75,3 +75,12 @@ singAllTheSongs('Alicia Keys', 'Bad Romance', 'Just Dance', 'Poker Face'); // Ok
 singAllTheSongs('Ella Fitzgerald', 2000);
 // Error: Argument of type 'number' is not
 // assignable to parameter of type 'string'.
+
+// * Return Types
+// Type: (songs: string[]) => number
+function singSongs(songs: string[]) {
+  for (const song of songs) {
+    console.log(`${song}`);
+  }
+  return songs.length;
+}
