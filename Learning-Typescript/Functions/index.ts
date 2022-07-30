@@ -106,8 +106,12 @@ function getSongRecordingDate(song: string): Date | undefined {
     case 'Greensleeves':
       return 'unknown';
     // Error: Type 'string' is not assignable to type 'Date'.
-    
+
     default:
       return undefined; // Ok
   }
 }
+
+// * Function Types
+let nothingInGivesString: () => string;
+let inputAndOutput: (input: string, count?: number) => number;
