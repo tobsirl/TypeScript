@@ -115,3 +115,11 @@ function getSongRecordingDate(song: string): Date | undefined {
 // * Function Types
 let nothingInGivesString: () => string;
 let inputAndOutput: (input: string, count?: number) => number;
+
+const songs = ['Juice', 'Shake it Off', 'You Belong to Me'];
+
+function runOnSongs(getSongAt: (index: number) => string) {
+  for (let i = 0; i < songs.length; i += 1) {
+    console.log(getSongAt(i));
+  }
+}
