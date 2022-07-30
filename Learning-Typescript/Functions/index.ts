@@ -135,7 +135,14 @@ function logSong(song: string) {
 }
 
 runOnSongs(logSong);
-// Error: Argument of type '(song: string) => string' is not 
+// Error: Argument of type '(song: string) => string' is not
 // assignable to parameter of type '(index: number) => string'.
 // Types of parameters 'song' and 'index' are incompatible.
 // Type 'number' is not assignable to type 'string'.
+
+// * Function Type Parentheses
+// Type is a function that returns a union: string | undefined
+let returnsStringOrUndefined: () => string | undefined;
+
+// Type is either undefined or a function that returns a string
+let maybeReturnsString: (() => string) | undefined;
