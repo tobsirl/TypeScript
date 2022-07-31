@@ -146,3 +146,10 @@ let returnsStringOrUndefined: () => string | undefined;
 
 // Type is either undefined or a function that returns a string
 let maybeReturnsString: (() => string) | undefined;
+
+// * Parameter Type Inferences
+let singer: (song: string) => string;
+
+singer = function (song) {
+  return `${song}`;
+}
