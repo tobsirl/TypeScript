@@ -152,4 +152,13 @@ let singer: (song: string) => string;
 
 singer = function (song) {
   return `${song}`;
-}
+};
+
+// * Function Type Aliases
+type StringToNumber = (input: string) => number;
+
+let stringToNumber: StringToNumber;
+
+stringToNumber = (input) => input.length; // Ok
+stringToNumber = (input) => input.toUpperCase();
+// Error: Type 'string' is not assignable to type 'number'.
