@@ -185,3 +185,9 @@ function logSongOne(song: string | undefined): void {
   return true;
   // Error: Type 'boolean' is not assignable to type 'void'.
 }
+
+let songLogger: (song: string) => void;
+songLogger = (song) => {
+  console.log(`${song}`);
+};
+songLogger('Heart of Glass'); // Ok
