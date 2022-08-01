@@ -172,3 +172,16 @@ function usesNumberToString(numberToString: NumberToString) {
 usesNumberToString((input) => `${input}! Hooray!`); // Ok
 usesNumberToString((input) => input * 2);
 // Error: Type 'number' is not assignable to type 'string'.
+
+// * More Return Types
+// Void Returns
+function logSongOne(song: string | undefined): void {
+  if (!song) {
+    return; // Ok
+  }
+
+  console.log(`${song}`);
+
+  return true;
+  // Error: Type 'boolean' is not assignable to type 'void'.
+}
