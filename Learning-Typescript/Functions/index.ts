@@ -221,3 +221,18 @@ function workWithUnsafeParam(param: unknown) {
   //  Here, param is know to be type string
   param.toUpperCase(); // Ok
 }
+
+// * FUNCTION OVERLOADS
+function createDate(timestramp: number): Date;
+function createDate(month: number, day: number, year: number): Date;
+function createDate(
+  monthOrTimestamp: number,
+  day?: number,
+  year?: number
+): Date {
+  return day === undefined || year === undefined
+    ? new Date(monthOrTimestamp)
+    : new Date(year, monthOrTimestamp, day);
+}
+
+
