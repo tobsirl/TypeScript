@@ -235,4 +235,9 @@ function createDate(
     : new Date(year, monthOrTimestamp, day);
 }
 
+createDate(554356808); // Ok
+createDate(7, 27, 1987); // Ok
 
+createDate(4, 1);
+// Error: No overload expects 2 arguments, but over loads
+// do exist that expect either 1 or 3 arguments.
