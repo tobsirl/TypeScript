@@ -200,3 +200,10 @@ let lazyValue: string | undefined;
 
 lazyValue = returnVoid();
 // Error: Type 'void' is not assignable to type 'string | undefined'.
+
+const records: string[] = [];
+function saveRecords(newRecords: string[]) {
+  newRecords.forEach((record) => records.push(record));
+}
+
+saveRecords(['21', 'Come on Over', 'The Bodyguard']);
