@@ -207,3 +207,17 @@ function saveRecords(newRecords: string[]) {
 }
 
 saveRecords(['21', 'Come on Over', 'The Bodyguard']);
+
+// * Never Returns
+function fail(message: string): never {
+  throw new Error(`Invariant failure: ${message}`);
+}
+
+function workWithUnsafeParam(param: unknown) {
+  if (typeof param !== 'string') {
+    fail(`param should be a string, not ${typeof param}`);
+  }
+
+  //  Here, param is know to be type string
+  param.toUpperCase(); // Ok
+}
