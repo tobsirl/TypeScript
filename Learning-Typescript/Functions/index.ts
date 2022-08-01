@@ -191,3 +191,12 @@ songLogger = (song) => {
   console.log(`${song}`);
 };
 songLogger('Heart of Glass'); // Ok
+
+function returnVoid() {
+  return;
+}
+
+let lazyValue: string | undefined;
+
+lazyValue = returnVoid();
+// Error: Type 'void' is not assignable to type 'string | undefined'.
