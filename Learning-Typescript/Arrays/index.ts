@@ -31,7 +31,15 @@ const namesMaybe = ['John', 'Jane', undefined];
 let values = [];
 
 // Type: string[]
-values.push('')
+values.push('');
 
 // Type: (number | string)[]
 values[0] = 0;
+
+// * Multidimensional Arrays
+let arrayOfArraysOfNumbers: number[][];
+arrayOfArraysOfNumbers = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
