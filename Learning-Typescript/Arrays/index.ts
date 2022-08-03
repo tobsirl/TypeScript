@@ -25,3 +25,13 @@ let arrayOfStringOrNumber: (string | number)[];
 
 // Type is (string | undefined)[]
 const namesMaybe = ['John', 'Jane', undefined];
+
+// * Evolving Any Arrays
+// Type: any[]
+let values = [];
+
+// Type: string[]
+values.push('')
+
+// Type: (number | string)[]
+values[0] = 0;
