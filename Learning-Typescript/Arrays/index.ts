@@ -43,3 +43,14 @@ arrayOfArraysOfNumbers = [
   [4, 5, 6],
   [7, 8, 9],
 ];
+
+// * Array Members
+const defenders = ['Clarenza', 'Dina'];
+
+// Type: string
+const defender = defenders[0];
+
+const soldiersOrDates = ['Deborah Sampson', new Date(1936, 8, 16)];
+
+// Type: string | Date
+const soldiersOrDate = soldiersOrDates[0];
