@@ -81,3 +81,18 @@ const birthYears = [1936, 1887, 1854];
 logHeros('Born in', ...birthYears);
 // Error: Argument of type 'number' is not
 // assignable to parameter of type 'string'.
+
+// * TUPLES
+let yearAndWarrior: [number, string];
+yearAndWarrior = [1936, 'Clarenza']; // Ok
+
+yearAndWarrior = [false, 'Clarenza'];
+// Error: Type 'boolean' is not assignable to type 'number'.
+
+yearAndWarrior = [530];
+// Error: Type '[number]' is not assignable to type '[number, string]'.
+// Source has 1 element(s) but target requires 2.
+
+// year type: number
+// warrior type: string
+let [year, warrior] = Math.random() > 0.5 ? [1936, 'Clarenza'] : [1936, 'Dina'];
