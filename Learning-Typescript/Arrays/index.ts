@@ -54,3 +54,13 @@ const soldiersOrDates = ['Deborah Sampson', new Date(1936, 8, 16)];
 
 // Type: string | Date
 const soldiersOrDate = soldiersOrDates[0];
+
+// * Spreads and Rests
+// Type: string[]
+const soldiers = ['Harriet Tubman', 'Joan of Arc', 'Khutulun'];
+
+// Type: number[]
+const soldierAges = [90, 19, 45];
+
+// Type: (string | number)[]
+const conjoined = [...soldiers, ...soldierAges];
