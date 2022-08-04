@@ -64,3 +64,20 @@ const soldierAges = [90, 19, 45];
 
 // Type: (string | number)[]
 const conjoined = [...soldiers, ...soldierAges];
+
+// Spreading Rest Parameters
+function logHeros(greeting: string, ...names: string[]) {
+  for (const name of names) {
+    console.log(`${greeting} ${name}`);
+  }
+}
+
+const heros = ['Cathay Williams', 'Lozen', 'Nzinga'];
+
+logHeros('Hello', ...heros);
+
+const birthYears = [1936, 1887, 1854];
+
+logHeros('Born in', ...birthYears);
+// Error: Argument of type 'number' is not
+// assignable to parameter of type 'string'.
