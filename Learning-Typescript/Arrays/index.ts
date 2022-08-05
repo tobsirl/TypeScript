@@ -131,3 +131,22 @@ logPair(...pairTupleIncorrect);
 
 const pairTupleCorrect: [string, number] = ['Amage', 1];
 logPair(...pairTupleCorrect); // Ok
+
+function logTrio(name: string, value: [number, boolean]) {
+  console.log(`${name}: ${value[0]}, ${value[1]}`);
+}
+
+const trios: [string, [number, boolean]][] = [
+  ['Amanitore', [1, true]],
+  ['Athefled', [2, false]],
+  ['Amanita', [3, false]],
+];
+
+trios.forEach((trio) => logTrio(...trio)); // Ok
+trios.forEach(logTrio);
+// Argument of type '(name: string, value: [number, boolean]) => void' 
+// is not assignable to parameter of type
+// 'value: [string, [number, boolean]]'. ...) => void'.
+// Types of parameters 'name' and 'value' are incompatible.
+// Type '[string, [number, boolean]]' is not assignable to type 'string'.
+
