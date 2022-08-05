@@ -96,3 +96,11 @@ yearAndWarrior = [530];
 // year type: number
 // warrior type: string
 let [year, warrior] = Math.random() > 0.5 ? [1936, 'Clarenza'] : [1936, 'Dina'];
+
+// * Tuple Assignability
+// Type: (boolean | number)[]
+const pairloose = [false, 123];
+const pairTupleLoose: [boolean, number] = pairloose;
+// Error: Type '(number | boolean)[]' is not
+// assignable to type '(boolean | number)[]'.
+// Target requires 2 element(s) but source may have fewer.
