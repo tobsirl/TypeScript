@@ -108,6 +108,17 @@ const pairTupleLoose: [boolean, number] = pairloose;
 const tupleThree: [boolean, number, string] = [false, 123, 'Clarenza'];
 const tupleTwoExact: [boolean, number] = [tupleThree[0], tupleThree[1]];
 const tupleTwoExtra: [boolean, number] = tupleThree;
-// Error: Type '[boolean, number, string]' is 
+// Error: Type '[boolean, number, string]' is
 // not assignable to type '[boolean, number]'.
 // Source has 3 element(s) but target allow only 2.
+
+// * Tuples as rest parameters
+function logPair(name: string, value: number) {
+  console.log(`${name}: ${value}`);
+}
+
+const pairArray = ['Amage', 1];
+
+logPair(...pairArray);
+// Error: A spread argument must either have a
+// tuple type or be passed to a rest parameter.
