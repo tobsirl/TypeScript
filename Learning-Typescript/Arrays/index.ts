@@ -104,3 +104,10 @@ const pairTupleLoose: [boolean, number] = pairloose;
 // Error: Type '(number | boolean)[]' is not
 // assignable to type '(boolean | number)[]'.
 // Target requires 2 element(s) but source may have fewer.
+
+const tupleThree: [boolean, number, string] = [false, 123, 'Clarenza'];
+const tupleTwoExact: [boolean, number] = [tupleThree[0], tupleThree[1]];
+const tupleTwoExtra: [boolean, number] = tupleThree;
+// Error: Type '[boolean, number, string]' is 
+// not assignable to type '[boolean, number]'.
+// Source has 3 element(s) but target allow only 2.
