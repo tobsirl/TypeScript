@@ -144,9 +144,18 @@ const trios: [string, [number, boolean]][] = [
 
 trios.forEach((trio) => logTrio(...trio)); // Ok
 trios.forEach(logTrio);
-// Argument of type '(name: string, value: [number, boolean]) => void' 
+// Argument of type '(name: string, value: [number, boolean]) => void'
 // is not assignable to parameter of type
 // 'value: [string, [number, boolean]]'. ...) => void'.
 // Types of parameters 'name' and 'value' are incompatible.
 // Type '[string, [number, boolean]]' is not assignable to type 'string'.
 
+// * Tuple Inferences
+// Return type: (string | number)[]
+function firstCharAndSize(input: string) {
+  return [input[0], input.length];
+}
+
+// firstChar type: string | number
+// size type: string | number
+const [firstChar, size] = firstCharAndSize('Gudit');
