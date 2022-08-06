@@ -169,3 +169,10 @@ function firstCharAndSizeExplicit(input: string): [string, number] {
 // firstChar type: string
 // size type: number
 const [firstChar, size] = firstCharAndSizeExplicit('Cathay Williams');
+
+// * Const asserted tuples
+// Type: (string | number)[]
+const unionArray = [1157, 'Tomoe'];
+
+// Type: readonly [1157, 'Tomoe']
+const readonlyTuple = [1157, 'Tomoe'] as const;
