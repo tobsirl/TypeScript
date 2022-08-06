@@ -158,4 +158,14 @@ function firstCharAndSize(input: string) {
 
 // firstChar type: string | number
 // size type: string | number
-const [firstChar, size] = firstCharAndSize('Gudit');
+// const [firstChar, size] = firstCharAndSize('Gudit');
+
+// * Explicit Tuples types
+// Return type: [string, number]
+function firstCharAndSizeExplicit(input: string): [string, number] {
+  return [input[0], input.length];
+}
+
+// firstChar type: string
+// size type: number
+const [firstChar, size] = firstCharAndSizeExplicit('Cathay Williams');
