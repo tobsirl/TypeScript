@@ -1,9 +1,9 @@
 // @errors: 2578
 type Primitive = string | number | boolean | null;
 
-type JSONObject = any;
-type JSONArray = any;
-type JSONValue = Primitive;
+type JSONObject = { [key: string]: JSONValue };
+type JSONArray = JSONValue[];
+type JSONValue = Primitive | JSONArray | JSONObject;
 
 ////// DO NOT EDIT ANY CODE BELOW THIS LINE //////
 function isJSON(arg: JSONValue) {}
