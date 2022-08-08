@@ -20,3 +20,9 @@ valueLater = {
 
 valueLater = 'Emily Dickinson';
 // Error: Type 'string' is not assignable to type 'Poet'.
+
+valueLater = {
+  born: true,
+  // Error: Type 'boolean' is not assignable to type 'number'.
+  name: 'Sappho',
+};
