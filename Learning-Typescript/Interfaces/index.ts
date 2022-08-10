@@ -58,3 +58,13 @@ function read(page: Page) {
   page.text += '!';
   // Error: Cannot assign to 'text' because it is a read-only property.
 }
+
+const pageIsh = {
+  text: 'Hello World',
+}
+
+// Ok: messengerIsh is an inferred object type with text, not a Page.
+page.text += '!';
+
+read(messengerIsh);
+
