@@ -26,3 +26,22 @@ valueLater = {
   // Error: Type 'boolean' is not assignable to type 'number'.
   name: 'Sappho',
 };
+
+// * Types of Properties *
+// * Optional Properties *
+interface Book {
+  author: string;
+  pages: number;
+}
+
+// Ok
+const ok: Book = {
+  author: 'Rita Dove',
+  pages: 200,
+};
+
+const missing: Book = {
+  pages: 200,
+};
+// Error: Property 'author' is missing in type '{ pages: number; }'
+// but required in type 'Book'.
