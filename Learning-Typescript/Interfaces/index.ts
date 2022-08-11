@@ -83,3 +83,8 @@ const hasBoth: HasBothFunctionTypes = {
 
 hasBoth.property(); // Ok
 hasBoth.method(); // Ok
+
+interface OptionalReadonlyFunctions {
+  optionalProperty?: () => string;
+  optionalMethod?(): string;
+}
