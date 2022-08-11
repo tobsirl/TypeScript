@@ -61,10 +61,25 @@ function read(page: Page) {
 
 const pageIsh = {
   text: 'Hello World',
-}
+};
 
 // Ok: messengerIsh is an inferred object type with text, not a Page.
 page.text += '!';
 
 read(messengerIsh);
 
+// * Functions and Methods *
+interface HasBothFunctionTypes {
+  property: () => string;
+  method(): string;
+}
+
+const hasBoth: HasBothFunctionTypes = {
+  property: () => '',
+  method() {
+    return '';
+  },
+};
+
+hasBoth.property(); // Ok
+hasBoth.method(); // Ok
