@@ -88,3 +88,16 @@ interface OptionalReadonlyFunctions {
   optionalProperty?: () => string;
   optionalMethod?(): string;
 }
+
+// * Call Signature *
+type FunctionAlias = (input: string) => number;
+
+interface CallSignature {
+  (input: string): number;
+}
+
+// Type: (input: string) => number
+const typedFunctionAlias: FunctionAlias = (input) => input.length; // Ok
+
+// Type: (input: string) => number
+const typedCallSignature: CallSignature = (input) => input.length; // Ok
