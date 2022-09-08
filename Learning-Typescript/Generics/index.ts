@@ -26,4 +26,20 @@ logWrapper((input: string) => {
 // Type: (input: unknown) => void
 logWrapper((input) => {
   console.log(input.length);
+  // Error: Property 'length' does not exist on type 'unknown'.
 });
+
+// Type: (input: string) => void
+logWrapper<string>((input) => {
+  console.log(input.length);
+});
+
+logWrapper<string>((input: boolean) => {
+  // Argument of type '(input: boolean) => void' is not
+  // assignable to parameter of type '(input: string) => void'.
+  // Types of parameters 'input' and 'input' are incompatible.
+  // Type 'string' is not assignable to type 'boolean'.
+});
+
+// Type: (input: string) => void
+logWrapper<string>((input: string) => {});
