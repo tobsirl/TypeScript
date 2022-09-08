@@ -17,3 +17,13 @@ function logWrapper<Input>(callback: (input: Input) => void) {
     callback(input);
   };
 }
+
+// Type: (input: string) => void
+logWrapper((input: string) => {
+  console.log(input.length);
+});
+
+// Type: (input: unknown) => void
+logWrapper((input) => {
+  console.log(input.length);
+});
